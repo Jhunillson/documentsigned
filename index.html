@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Signature</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="drag-drop-zone">
+        <button id="browse-btn">Browse PDF</button>
+        <input type="file" id="file-input" accept="application/pdf" hidden>
+        <p>Drag and drop your PDF file here or click "Browse PDF".</p>
+    </div>
+
+    <canvas id="pdf-render" style="display: none; border: 1px solid #ccc; margin: 20px auto;"></canvas>
+
+    <div id="signature-tools" class="hidden">
+        <button id="add-signature-btn">Adicionar Assinatura</button>
+        <input type="file" id="signature-input" accept="image/png, image/jpeg" hidden>
+        <img id="signature-img" class="hidden" alt="Signature">
+    </div>
+
+    <div id="download-container" style="text-align: center; margin-top: 20px;"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
